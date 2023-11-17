@@ -8,132 +8,131 @@ db.once('open', async () => {
   await cleanDB('User', 'users');
 
   const categories = await Category.insertMany([
-    { name: 'Food' },
-    { name: 'Household Supplies' },
-    { name: 'Electronics' },
-    { name: 'Books' },
-    { name: 'Toys' }
+    { name: 'Mens' },
+    { name: 'Womens' },
+    { name: 'Kids' }
   ]);
 
   console.log('categories seeded');
 
   const products = await Product.insertMany([
     {
-      name: 'Tin of Cookies',
-      description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
-      category: categories[0]._id,
-      price: 2.99,
-      quantity: 500
+      brand: 'Nike',
+      model: 
+        'Air Jourdan XXXIII',
+      image: 'https://eurotas-demo.myshopify.com/cdn/shop/products/product-1.jpg?v=1569556553',
+      gender: categories[0]._id,
+      price: 115,
+      size: 12
     },
     {
-      name: 'Canned Coffee',
-      description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
-      category: categories[0]._id,
-      price: 1.99,
-      quantity: 500
+      brand: 'Adidas',
+      model: 
+        'YUNG-1',
+      image: 'https://eurotas-demo.myshopify.com/cdn/shop/products/product-v1-img2.jpg?v=1565778143',
+      gender: categories[0]._id,
+      price: 125,
+      size: 10
     },
     {
-      name: 'Toilet Paper',
-      category: categories[1]._id,
-      description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
-      price: 7.99,
-      quantity: 20
+      brand: 'Reebok',
+      model: 
+        'Mobius OG',
+      image: 'https://eurotas-demo.myshopify.com/cdn/shop/products/product-v1-img3.jpg?v=1565778175',
+      gender: categories[0]._id,
+      price: 140,
+      size: 11
     },
     {
-      name: 'Handmade Soap',
-      category: categories[1]._id,
-      description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
-      price: 3.99,
-      quantity: 50
+      brand: 'New Balance',
+      model: 
+        'Summit Unknown',
+      image: 'https://eurotas-demo.myshopify.com/cdn/shop/products/product-v1-img8.jpg?v=1565778424',
+      gender: categories[1]._id,
+      price: 110,
+      size: 9
     },
     {
-      name: 'Set of Wooden Spoons',
-      category: categories[1]._id,
-      description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'wooden-spoons.jpg',
-      price: 14.99,
-      quantity: 100
+      brand: 'Adidas',
+      model: 
+        'POD-S3.1',
+      image: 'https://eurotas-demo.myshopify.com/cdn/shop/products/Layer-46.jpg?v=1569566459',
+      gender: categories[2]._id,
+      price: 95,
+      size: 7
     },
     {
-      name: 'Camera',
-      category: categories[2]._id,
-      description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'camera.jpg',
-      price: 399.99,
-      quantity: 30
+      brand: 'Adidas',
+      model: 
+        'Crazy BYW X Shoes',
+      image: 'https://eurotas-demo.myshopify.com/cdn/shop/products/product-v1-img11.jpg?v=1565778588',
+      gender: categories[0]._id,
+      price: 150,
+      size: 13
     },
     {
-      name: 'Tablet',
-      category: categories[2]._id,
-      description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'tablet.jpg',
-      price: 199.99,
-      quantity: 30
+      brand: 'Nike',
+      model: 
+        'Jordan Grind 2 UNC',
+      image: 'https://eurotas-demo.myshopify.com/cdn/shop/products/product-5_1525fd60-44a7-4300-8c09-7869ff6eb274.jpg?v=1553306015',
+      gender: categories[0]._id,
+      price: 115,
+      size: 10
     },
     {
-      name: 'Tales at Bedtime',
-      category: categories[3]._id,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'bedtime-book.jpg',
-      price: 9.99,
-      quantity: 100
+      brand: 'Nike',
+      model: 
+        'Jordan Zer0.1 Low N7',
+      image: 'https://eurotas-demo.myshopify.com/cdn/shop/products/product-v1-img7.jpg?v=1565778376',
+      gender: categories[0]._id,
+      price: 120,
+      size: 11
     },
     {
-      name: 'Spinning Top',
-      category: categories[4]._id,
-      description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: 'spinning-top.jpg',
-      price: 1.99,
-      quantity: 1000
+      brand: 'Nike',
+      model: 
+        'Air Force Low Casual',
+      image: 'https://media.finishline.com/i/finishline/DD8959_600_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)',
+      gender: categories[1]._id,
+      price: 115,
+      size: 8
     },
     {
-      name: 'Set of Plastic Horses',
-      category: categories[4]._id,
-      description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-      image: 'plastic-horses.jpg',
-      price: 2.99,
-      quantity: 1000
+      brand: 'Adidas',
+      model: 
+        'UltraBOOST 1.0',
+      image: 'https://media.finishline.com/s/finishline/ID9669_100?$Main$&layer0=[h=245&w=245&bg=rgb(237,237,237)]&h=245&w=245&fmt=webp',
+      gender: categories[1]._id,
+      price: 190,
+      size: 6
     },
     {
-      name: 'Teddy Bear',
-      category: categories[4]._id,
-      description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-      image: 'teddy-bear.jpg',
-      price: 7.99,
-      quantity: 100
+      brand: 'Timberland',
+      model: 
+        'Timberland Waterproof Boots',
+      image: 'https://media.finishline.com/s/finishline/12809_WHE?$Main$&layer0=[h=245&w=245&bg=rgb(237,237,237)]&h=245&w=245&fmt=webp',
+      gender: categories[2]._id,
+      price: 80,
+      size: 4
     },
     {
-      name: 'Alphabet Blocks',
-      category: categories[4]._id,
-      description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'alphabet-blocks.jpg',
-      price: 9.99,
-      quantity: 600
+      brand: 'Vans',
+      model: 
+        'Vans x Sesame Street SK8-Hi Zip',
+      image: 'https://media.finishline.com/s/finishline/00C4NBMC_900?$Main$&layer0=[h=245&w=245&bg=rgb(237,237,237)]&h=245&w=245&fmt=webp',
+      gender: categories[2]._id,
+      price: 70,
+      size: 6
     }
   ]);
 
   console.log('products seeded');
 
   await User.create({
-    firstName: 'Pamela',
-    lastName: 'Washington',
-    email: 'pamela@testmail.com',
-    password: 'password12345',
+    firstName: 'Lourdes',
+    lastName: 'Dorvilus',
+    email: 'lourdes@testmail.com',
+    password: 'password123',
     orders: [
       {
         products: [products[0]._id, products[0]._id, products[1]._id]
@@ -142,10 +141,10 @@ db.once('open', async () => {
   });
 
   await User.create({
-    firstName: 'Elijah',
-    lastName: 'Holt',
-    email: 'eholt@testmail.com',
-    password: 'password12345'
+    firstName: 'Richard',
+    lastName: 'Taveras',
+    email: 'rich@testmail.com',
+    password: 'password123'
   });
 
   console.log('users seeded');
