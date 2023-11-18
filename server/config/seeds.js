@@ -21,7 +21,7 @@ db.once('open', async () => {
       model: 
         'Air Jourdan XXXIII',
       image: 'https://eurotas-demo.myshopify.com/cdn/shop/products/product-1.jpg?v=1569556553',
-      gender: categories[0]._id,
+      category: categories[0]._id,
       price: 115,
       size: 12
     },
@@ -30,7 +30,7 @@ db.once('open', async () => {
       model: 
         'YUNG-1',
       image: 'https://eurotas-demo.myshopify.com/cdn/shop/products/product-v1-img2.jpg?v=1565778143',
-      gender: categories[0]._id,
+      category: categories[0]._id,
       price: 125,
       size: 10
     },
@@ -39,7 +39,7 @@ db.once('open', async () => {
       model: 
         'Mobius OG',
       image: 'https://eurotas-demo.myshopify.com/cdn/shop/products/product-v1-img3.jpg?v=1565778175',
-      gender: categories[0]._id,
+      category: categories[0]._id,
       price: 140,
       size: 11
     },
@@ -48,7 +48,7 @@ db.once('open', async () => {
       model: 
         'Summit Unknown',
       image: 'https://eurotas-demo.myshopify.com/cdn/shop/products/product-v1-img8.jpg?v=1565778424',
-      gender: categories[1]._id,
+      category: categories[1]._id,
       price: 110,
       size: 9
     },
@@ -57,7 +57,7 @@ db.once('open', async () => {
       model: 
         'POD-S3.1',
       image: 'https://eurotas-demo.myshopify.com/cdn/shop/products/Layer-46.jpg?v=1569566459',
-      gender: categories[2]._id,
+      category: categories[2]._id,
       price: 95,
       size: 7
     },
@@ -66,7 +66,7 @@ db.once('open', async () => {
       model: 
         'Crazy BYW X Shoes',
       image: 'https://eurotas-demo.myshopify.com/cdn/shop/products/product-v1-img11.jpg?v=1565778588',
-      gender: categories[0]._id,
+      category: categories[0]._id,
       price: 150,
       size: 13
     },
@@ -75,7 +75,7 @@ db.once('open', async () => {
       model: 
         'Jordan Grind 2 UNC',
       image: 'https://eurotas-demo.myshopify.com/cdn/shop/products/product-5_1525fd60-44a7-4300-8c09-7869ff6eb274.jpg?v=1553306015',
-      gender: categories[0]._id,
+      category: categories[0]._id,
       price: 115,
       size: 10
     },
@@ -84,7 +84,7 @@ db.once('open', async () => {
       model: 
         'Jordan Zer0.1 Low N7',
       image: 'https://eurotas-demo.myshopify.com/cdn/shop/products/product-v1-img7.jpg?v=1565778376',
-      gender: categories[0]._id,
+      category: categories[0]._id,
       price: 120,
       size: 11
     },
@@ -93,7 +93,7 @@ db.once('open', async () => {
       model: 
         'Air Force Low Casual',
       image: 'https://media.finishline.com/i/finishline/DD8959_600_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)',
-      gender: categories[1]._id,
+      category: categories[1]._id,
       price: 115,
       size: 8
     },
@@ -102,7 +102,7 @@ db.once('open', async () => {
       model: 
         'UltraBOOST 1.0',
       image: 'https://media.finishline.com/s/finishline/ID9669_100?$Main$&layer0=[h=245&w=245&bg=rgb(237,237,237)]&h=245&w=245&fmt=webp',
-      gender: categories[1]._id,
+      category: categories[1]._id,
       price: 190,
       size: 6
     },
@@ -111,7 +111,7 @@ db.once('open', async () => {
       model: 
         'Timberland Waterproof Boots',
       image: 'https://media.finishline.com/s/finishline/12809_WHE?$Main$&layer0=[h=245&w=245&bg=rgb(237,237,237)]&h=245&w=245&fmt=webp',
-      gender: categories[2]._id,
+      category: categories[2]._id,
       price: 80,
       size: 4
     },
@@ -120,7 +120,7 @@ db.once('open', async () => {
       model: 
         'Vans x Sesame Street SK8-Hi Zip',
       image: 'https://media.finishline.com/s/finishline/00C4NBMC_900?$Main$&layer0=[h=245&w=245&bg=rgb(237,237,237)]&h=245&w=245&fmt=webp',
-      gender: categories[2]._id,
+      category: categories[2]._id,
       price: 70,
       size: 6
     }
