@@ -1,14 +1,14 @@
-import ProductList from "../components/ProductList";
-import CategoryMenu from "../components/CategoryMenu";
-import Cart from "../components/Cart";
 
+import NavBar from "../components/NavBar/NavBar";
+import Hero from "../components/Hero/Hero";
+import Cards from "../components/Cards/Cards";
 const Home = () => {
   return (
-    <div className="container">
-      <CategoryMenu />
-      <ProductList />
-      <Cart />
-    </div>
+    <>
+    <NavBar/>
+    <Hero/>
+    <Cards/>
+    </>
   );
 };
 
