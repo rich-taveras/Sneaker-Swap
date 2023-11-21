@@ -1,0 +1,252 @@
+@media screen and (min-width: 280px){
+    .carousel-img{
+        bottom: 30%;
+        left: 50px;
+        scale: 1.2;
+    }
+    .carousel-content h5{
+        font-size: 100%;
+    }
+    .carousel-content h1{
+        font-size: 150%;
+    }
+    .carousel-content{
+        bottom: 55%;
+        right: 38%;
+    }
+    .custom-main-section, .image{
+        width: 100%;
+        height: 50vh;
+    }
+}
+@media screen and (min-width: 360px){
+    .carousel-img{
+        bottom: 25%;
+        left: 55px;
+        scale: 1.3;
+    }
+    .carousel-content h5{
+        font-size: 100%;
+    }
+    .carousel-content h1{
+        font-size: 200%;
+    }
+    .custom-main-section, .image{
+        width: 100%;
+        height: 50vh;
+    }
+}
+@media screen and (min-width: 375px){
+    .carousel-img{
+        bottom: 23%;
+        left: 55px;
+        scale: 1.2;
+    }
+    .carousel-content h5{
+        font-size: 100%;
+    }
+    .carousel-content h1{
+        font-size: 200%;
+    }
+    .custom-main-section, .image{
+        width: 100%;
+        height: 50vh;
+    }
+}
+@media screen and (min-width: 390px){
+    .carousel-img{
+        bottom: 25%;
+        left: 55px;
+        scale: 1.3;
+    }
+    .carousel-content h5{
+        font-size: 100%;
+    }
+    .carousel-content h1{
+        font-size: 190%;
+    }
+    .custom-main-section, .image{
+        width: 100%;
+        height: 50vh;
+    }
+}
+@media screen and (min-width: 414px){
+    .carousel-img{
+        bottom: 26%;
+        left: 75px;
+        scale: 1.4;
+    }
+    .carousel-content h5{
+        font-size: 100%;
+    }
+    .carousel-content h1{
+        font-size: 200%;
+    }
+    .custom-main-section, .image{
+        width: 100%;
+        height: 50vh;
+    }
+}
+@media screen and (min-width: 430px){
+    .carousel-img{
+        bottom: 26%;
+        left: 75px;
+        scale: 1.4;
+    }
+    .carousel-content h5{
+        font-size: 100%;
+    }
+    .carousel-content h1{
+        font-size: 250%;
+    }
+
+}
+@media screen and (min-width: 540px){
+    .carousel-img{
+        bottom: 20%;
+        left: 80px;
+        scale: 1.1;
+    }
+    .carousel-content h5{
+        font-size: 100%;
+    }
+    .carousel-content h1{
+        font-size: 190%;
+    }
+    .carousel-content{
+        bottom: 65%;
+        right: 38%;
+    }
+    .custom-main-section, .image{
+        width: 100%;
+        height: 50vh;
+    }
+}
+@media screen and (min-width: 768px){
+    .carousel-img{
+        bottom: 18%;
+        left: 19%;
+        scale: 0.9;
+    }
+    .carousel-content h5{
+        font-size: 100%;
+    }
+    .carousel-content h1{
+        font-size: 200%;
+    }
+    .carousel-content{
+        bottom:70%;
+        right: 50%;
+    }
+    .custom-main-section, .image{
+        width: 100%;
+        height: 40vh;
+    }
+}
+@media screen and (min-width: 820px){
+    .carousel-img{
+        bottom: 20%;
+        left: 19%;
+        scale: 1;
+    }
+    .carousel-content h5{
+        font-size: 100%;
+    }
+    .carousel-content h1{
+        font-size: 250%;
+    }
+    .carousel-content{
+        bottom: 70%;
+        right: 50%;
+    }
+    .custom-main-section, .image{
+        width: 100%;
+        height: 40vh;
+    }
+}
+@media screen and (min-width: 912px){
+    .carousel-img{
+        bottom: 24%;
+        left: 200px;
+        scale: 1.2;
+    }
+    .carousel-content h5{
+        font-size: 100%;
+    }
+    .carousel-content h1{
+        font-size: 250%;
+    }
+    .carousel-content{
+        bottom: 71%;
+        right: 52%;
+    }
+    .custom-main-section, .image{
+        width: 100%;
+        height: 40vh;
+    }
+}
+@media screen and (min-width: 1023px){
+    .carousel-img{
+        bottom: 25%;
+        left: 150px;
+        scale: 1.2;
+    }
+    .carousel-content h5{
+        font-size: 100%;
+    }
+    .carousel-content h1{
+        font-size: 250%;
+    }
+    .carousel-content{
+        bottom: 55%;
+        right: 10%;
+    }
+    .custom-main-section, .image{
+        width: 100%;
+        height: 100vh;
+    }
+}
+@media screen and (min-width: 1024px){
+    .carousel-img{
+        bottom: 12%;
+        left: 150px;
+        scale: 0.8;
+    }
+    .carousel-content h5{
+        font-size: 100%;
+    }
+    .carousel-content h1{
+        font-size: 250%;
+    }
+    .carousel-content{
+        bottom: 55%;
+        right: 12%;
+    }
+    .custom-main-section, .image{
+        width: 100%;
+        height: 40vh;
+    }
+}
+@media screen and (min-width: 1280px){
+    .carousel-img{
+        bottom: 15%;
+        left: 200px;
+        scale: 0.9;
+    }
+    .carousel-content h5{
+        font-size: 100%;
+    }
+    .carousel-content h1{
+        font-size: 300%;
+    }
+    .carousel-content{
+        bottom: 55%;
+        right: 15%;
+    }
+    .custom-main-section, .image{
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+

@@ -1,13 +1,13 @@
 // import Auth from "../../utils/auth";
 // import { Link } from "react-router-dom";
 import "../Nav/index.css";
-import BtnNav from "./BtnNav/BtnNav";
-import SearchBar from "./SearchBar/SearchBar";
+// import BtnNav from "./BtnNav/BtnNav";
+// import SearchBar from "./SearchBar/SearchBar";
 import MainInfo from "./MainInfo/MainInfo";
 import SecundaryInfo from "./SecundaryInfo/SecundaryInfo";
-import Logo from "./Logo/Logo";
+// import Logo from "./Logo/Logo";
+import Ticker from "./Ticker/Ticker";
 function Nav() {
-
   // function showNavigation() {
   //   if (Auth.loggedIn()) {
   //     return (
@@ -39,31 +39,28 @@ function Nav() {
 
   return (
     <>
-      <div className="d-flex justify-content-between">
-       <MainInfo/>
-      </div>
-      <div className="text-center bg-black">
-        <span className="fs-5 text-light">Get Discount 30% Off</span>
-      </div>
-      <div className="d-flex justify-content-evenly align-items-center bg-pink">
-        <div className="d-flex col-3">
-        <SearchBar/>
+      <section className="d-flex flex-row col-12">
+        <div className="d-flex flex-row justify-content-between bg-pink col-12 position-relative z-1">
+          <MainInfo />
         </div>
-        <div className=" d-flex col-3 justify-content-center">
-          <Logo/>
-                 
-        </div>
-        <div className=" d-flex col-3 justify-content-end">
-        <BtnNav/>
-        </div>
-      </div>
-      <div>
-      <div className=" col-12 nav-bar d-flex justify-content-evenly custom-nav-items me-5 bg-green">
-        <SecundaryInfo/>
-        </div>
-      </div>
+        <Ticker />
+        {/* <div className="d-flex justify-content-evenly align-items-center bg- col-12">
+          <div className="d-flex col-3">
+            <SearchBar />
+          </div>
+          <div className=" d-flex col-3 justify-content-center">
+            <Logo />
+          </div>
+          <div className=" d-flex col-3 justify-content-end">
+            <BtnNav />
+          </div>
+        </div> */}
 
-      {/* <header className="flex-row px-1">
+        <div className="nav-bar d-flex flex-row justify-content-evenly custom-nav-items me-5 d-none d-md-flex col-md-12 position-relative z-1">
+          <SecundaryInfo />
+        </div>
+       
+        {/* <header className="flex-row px-1">
         <h1>
           <Link to="/">
             <span role="img" aria-label="shopping bag">
@@ -75,6 +72,7 @@ function Nav() {
 
         <nav>{showNavigation()}</nav>
       </header> */}
+      </section>
     </>
   );
 }
