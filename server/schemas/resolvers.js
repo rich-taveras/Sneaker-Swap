@@ -7,16 +7,22 @@ const resolvers = {
     categories: async () => {
       return await Category.find();
     },
-    products: async (parent, { category, name }) => {
+    products: async (parent, { category, model, brand }) => {
       const params = {};
 
       if (category) {
         params.category = category;
       }
 
-      if (name) {
-        params.name = {
-          $regex: name
+      if (model) {
+        params.model = {
+          $regex: model
+        };
+      }
+
+      if (brand) {
+        params.brand = {
+          $regex: brand
         };
       }
 
@@ -63,9 +69,9 @@ const resolvers = {
           price_data: {
             currency: 'usd',
             product_data: {
-              name: product.name,
-              description: product.description,
-              images: [`${url}/images/${product.image}`]
+              model: product.model,
+              brand: product.brand,
+              image: product.image
             },
             unit_amount: product.price * 100,
           },
