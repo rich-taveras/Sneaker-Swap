@@ -1,9 +1,18 @@
 .custom-card2{
-    height: 45vh;
+    height: 42vh;
     background-color: red;
     
 }
 .custom-card2 img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+.custom-text-card2{
+    z-index: 2;
+    top: 25%;
+    left: 10%;
+}
+.newClass{
+    left: 50%;
 }

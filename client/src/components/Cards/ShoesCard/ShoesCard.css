@@ -1,0 +1,22 @@
+
+.card{
+    width: 18rem;
+}
+/* @media screen and (max-width:1279px) {
+    .card{
+        width: 13rem;
+    }
+    
+}
+@media screen and (max-width:959px) {
+    .card{
+        width: 18rem;
+    }
+    
+}
+@media screen and (max-width:638px) {
+    .card{
+        width: 30rem;
+    }
+    
+} */
