@@ -2,13 +2,13 @@ const CartBody = ()=>{
     return(
         <>
            <button
-            className="btn btn-primary"
+            className="btn btn-primary "
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasRight"
             aria-controls="offcanvasRight"
           >
-            Cart
+            <i className="fa-solid fa-cart-shopping"></i>
           </button>
 
           <div
