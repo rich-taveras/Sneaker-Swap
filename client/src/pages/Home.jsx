@@ -6,6 +6,7 @@ import ShoesCard from "../components/Cards/ShoesCard/ShoesCard";
 import NewArrivalTxt from "../components/NewArrivalTxt/NewArrivalTxt";
 import ImageHooded from "../components/ImageHooded/ImageHooded";
 import Footer from "../components/Footer/Footer";
+import ShopHero from "../components/ShopHero/ShopHero";
 const Home = () => {
   return (
     <>
@@ -15,6 +16,7 @@ const Home = () => {
     <NewArrivalTxt/>
     <ShoesCard/>
     <ImageHooded/>
+    <ShopHero/>
     <Footer/>
     </>
   );
