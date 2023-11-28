@@ -8,7 +8,6 @@ const NavBar = () => {
         <div className="container-fluid">            
           <MenuHamburger/> 
           <Cart/>       
-          <CartBody />
         </div>
       </nav>
     </>
