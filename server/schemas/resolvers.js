@@ -37,10 +37,11 @@ const resolvers = {
           path: 'orders.products',
           populate: 'category'
         });
+        const token = signToken(user);
 
         user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
 
-        return user;
+        return {token, user};
       }
 
       throw AuthenticationError;
