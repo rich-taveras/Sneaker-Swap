@@ -3,16 +3,19 @@ import { pluralize } from "../../utils/helpers"
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import { StarRating } from "../starRating/StarRating";
 
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
 
   const {
-    image,
-    name,
     _id,
-    price,
-    quantity
+    brand,
+    category,
+    image,
+    model,
+   price,
+   size
   } = item;
 
   const { cart } = state
@@ -39,20 +42,57 @@ function ProductItem(item) {
   }
 
   return (
-    <div className="card px-1 py-1">
-      <Link to={`/products/${_id}`}>
-        <img
-          alt={name}
-          src={`/images/${image}`}
-        />
-        <p>{name}</p>
-      </Link>
-      <div>
-        <div>{quantity} {pluralize("item", quantity)} in stock</div>
-        <span>${price}</span>
+    
+    <div className="card m-3">
+    <img
+      src={image}
+      className="card-img-top"
+      alt="..."
+    />
+    <div className="card-body text-start">
+      <div className="d-flex flex-row justify-content-between">
+        <span className="col-4">{category}</span>
+        
+          <StarRating />
+        
       </div>
-      <button onClick={addToCart}>Add to cart</button>
+      <h5>{model}</h5>
+      <div className="d-flex justify-content-between">
+        <span>${price}</span>
+        <a href="">
+        <button onClick={addToCart}><i className="fa-solid fa-cart-arrow-down"></i></button>
+          
+        </a>
+      </div>
     </div>
+  </div>
+
+
+
+
+
+
+
+    // <div className="card px-1 py-1">
+    //   <h1>{brand}</h1>
+    //   <h1>{category}</h1>
+    //   <h1>{model}</h1>
+    //   <h1>{size}</h1>
+    //   <h1>{price}</h1>
+    //   <img src={image} alt="" />
+    //   {/* <Link to={`/products/${_id}`}>
+    //     <img
+    //       alt={name}
+    //       src={image}
+    //     />
+    //     <p>{name}</p>
+    //   </Link>
+    //   <div>
+    //     <div> {pluralize("item")} in stock</div>
+    //     <span>${price}</span>
+    //   </div> */}
+    //   <button onClick={addToCart}>Add to cart</button>
+    // </div>
   );
 }
 

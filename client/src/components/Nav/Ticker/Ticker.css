@@ -1,0 +1,36 @@
+.custom-logo-div{
+  z-index: 3;
+  right: 0;
+  top: 0;
+}
+/* ITEMS INTO LONG HORIZONTAL ROW */
+.hmove{
+    display: flex;
+    }
+    
+    .hmove span{
+        margin-left: 0px;
+    }
+    .move {
+      display: flex;
+    }
+    .hitem {
+      flex-shrink: 0;
+      width: 100%;
+      text-align: center;
+    }
+    /* HIDE SCROLLBAR */
+    .hwrap {
+      overflow: hidden;
+    }
+    /* ANIMATION-MOVE ITEMS RIGHT TO LEFT */
+    .hmove {
+    animation: tickerhr linear 55s infinite;
+    }
+    .hmove:hover{
+        animation-play-state: paused;
+    }
+    @keyframes tickerhr {
+        0% {transform: translate3d(100%,0,0);}
+        100% {transform: translate3d(-400%,0,0);}
+    }

@@ -7,16 +7,22 @@ const resolvers = {
     categories: async () => {
       return await Category.find();
     },
-    products: async (parent, { category, name }) => {
+    products: async (parent, { category, model, brand }) => {
       const params = {};
 
       if (category) {
         params.category = category;
       }
 
-      if (name) {
-        params.name = {
-          $regex: name
+      if (model) {
+        params.model = {
+          $regex: model
+        };
+      }
+
+      if (brand) {
+        params.brand = {
+          $regex: brand
         };
       }
 
@@ -63,9 +69,9 @@ const resolvers = {
           price_data: {
             currency: 'usd',
             product_data: {
-              name: product.name,
-              description: product.description,
-              images: [`${url}/images/${product.image}`]
+              model: product.model,
+              brand: product.brand,
+              image: product.image
             },
             unit_amount: product.price * 100,
           },
@@ -85,6 +91,23 @@ const resolvers = {
     },
   },
   Mutation: {
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
+
+      if (!user) {
+        throw AuthenticationError;
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw AuthenticationError;
+      }
+
+      const token = signToken(user);
+
+      return { token, user };
+    },
     addUser: async (parent, args) => {
       const user = await User.create(args);
       const token = signToken(user);
@@ -114,23 +137,20 @@ const resolvers = {
 
       return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
     },
-    login: async (parent, { email, password }) => {
-      const user = await User.findOne({ email });
+    removeProduct: async (parent, { productId }, context) => {
+      if (context.user) {
+        
 
-      if (!user) {
-        throw AuthenticationError;
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { savedProduct: {productId} } }
+        );
+
+        return productId;
       }
-
-      const correctPw = await user.isCorrectPassword(password);
-
-      if (!correctPw) {
-        throw AuthenticationError;
-      }
-
-      const token = signToken(user);
-
-      return { token, user };
-    }
+      throw AuthenticationError;
+    },
+ 
   }
 };
 
