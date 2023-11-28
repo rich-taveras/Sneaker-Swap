@@ -18,6 +18,7 @@ const Cart = () => {
 
   useEffect(() => {
     if (data) {
+      console.log(data);
       stripePromise.then((res) => {
         res.redirectToCheckout({ sessionId: data.checkout.session });
       });
