@@ -6,15 +6,20 @@ import ShoesCard from "../components/Cards/ShoesCard/ShoesCard";
 import NewArrivalTxt from "../components/NewArrivalTxt/NewArrivalTxt";
 import ImageHooded from "../components/ImageHooded/ImageHooded";
 import Footer from "../components/Footer/Footer";
+import ShopHero from "../components/ShopHero/ShopHero";
+import Cart from "../components/Cart";
+import ProductList from "../components/ProductList";
+
 const Home = () => {
   return (
     <>
     <NavBar/>
-    <Hero/>   
+    <Hero/>
     <Cards/>
     <NewArrivalTxt/>
-    <ShoesCard/>
+    <ProductList/>
     <ImageHooded/>
+    <ShopHero/>
     <Footer/>
     </>
   );

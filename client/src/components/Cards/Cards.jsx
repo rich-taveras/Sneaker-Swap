@@ -8,7 +8,7 @@ const Cards = ()=>{
     const newClass = "newClass"
     return(
         <>
-        <section className="d-flex flex-row"> 
+        <section className="d-flex flex-row col-12"> 
         <Card1 url={imgCard1}/>
         <Card2 url={imgCard2}/>
         <Card2 url={imgCard3} newClass={newClass}/>

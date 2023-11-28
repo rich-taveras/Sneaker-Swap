@@ -1,9 +1,7 @@
 const NewArrivalTxt = ()=>{
     return(
-        <section className="m-4">
-        <div className="container text-center">
+        <section className="my-5 text-center col-12">
             <h1>New Arrival</h1>
-        </div>
         </section>
     )
 }
