@@ -85,6 +85,23 @@ const resolvers = {
     },
   },
   Mutation: {
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
+
+      if (!user) {
+        throw AuthenticationError;
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw AuthenticationError;
+      }
+
+      const token = signToken(user);
+
+      return { token, user };
+    },
     addUser: async (parent, args) => {
       const user = await User.create(args);
       const token = signToken(user);
@@ -114,23 +131,20 @@ const resolvers = {
 
       return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
     },
-    login: async (parent, { email, password }) => {
-      const user = await User.findOne({ email });
+    removeProduct: async (parent, { productId }, context) => {
+      if (context.user) {
+        
 
-      if (!user) {
-        throw AuthenticationError;
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { savedProduct: {productId} } }
+        );
+
+        return productId;
       }
-
-      const correctPw = await user.isCorrectPassword(password);
-
-      if (!correctPw) {
-        throw AuthenticationError;
-      }
-
-      const token = signToken(user);
-
-      return { token, user };
-    }
+      throw AuthenticationError;
+    },
+ 
   }
 };
 
