@@ -6,11 +6,11 @@ const typeDefs = `
 
   type Product {
     _id: ID
-    name: String
-    description: String
+    brand: String
+    model: String
     image: String
-    quantity: Int
     price: Float
+    size: Int
     category: Category
   }
 
@@ -48,7 +48,7 @@ const typeDefs = `
 
   type Query {
     categories: [Category]
-    products(category: ID, name: String): [Product]
+    products(category: ID, model: String, brand: String): [Product]
     product(_id: ID!): Product
     user: User
     order(_id: ID!): Order

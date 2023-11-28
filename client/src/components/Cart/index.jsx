@@ -53,6 +53,7 @@ const Cart = () => {
       const productIds = state.cart.map((item) => item._id);
 
       // Add each item id to the productIds array
+      // eslint-disable-next-line no-undef
       await API.post('/cart/add-to-cart', { productIds });
 
       // Invoke the getCheckout query passing an object containing the id for all our products
@@ -101,7 +102,7 @@ const Cart = () => {
           <span role="img" aria-label="shocked">
             😱
           </span>
-          You haven't added anything to your cart yet!
+          You haven t added anything to your cart yet!
         </h3>
       )}
     </div>
