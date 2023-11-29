@@ -26,6 +26,7 @@
     "react-focus-lock": "^2.0.5",
     "react-router-dom": "^6.11.2",
     "react-simple-star-rating": "^5.1.7",
+    "react-tiny-popover": "^8.0.4",
     "styled-components": "^4.3.2",
     "swiper": "^11.0.4",
     "vitest": "^0.31.4"
