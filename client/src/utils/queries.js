@@ -41,31 +41,29 @@ query Products($category: ID) {
 `;
 
 export const QUERY_CATEGORIES = gql`
-  {
-    categories {
-      _id
-      name
-    }
+query Categories {
+  categories {
+    _id
+    name
   }
+}
 `;
 
 export const QUERY_USER = gql`
-  {
-    user {
-      firstName
-      lastName
-      orders {
-        _id
-        purchaseDate
-        products {
-          _id
-          name
-          description
-          price
-          quantity
-          image
-        }
+query User {
+  user {
+    _id
+    email
+    firstName
+    orders {
+      _id
+      products {
+        model
+        brand
+        price
+        size
       }
     }
   }
+}
 `;
