@@ -91,6 +91,11 @@ const resolvers = {
     },
   },
   Mutation: {
+    addUser: async (parent, { firstName, lastName, email, password }) => {
+      const user = await User.create({ firstName, lastName, email, password });
+      const token = signToken(user);
+      return { token, user };
+    },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
@@ -108,48 +113,43 @@ const resolvers = {
 
       return { token, user };
     },
-    addUser: async (parent, args) => {
-      const user = await User.create(args);
-      const token = signToken(user);
+    
+    // addOrder: async (parent, { products }, context) => {
+    //   if (context.user) {
+    //     const order = new Order({ products });
 
-      return { token, user };
-    },
-    addOrder: async (parent, { products }, context) => {
-      if (context.user) {
-        const order = new Order({ products });
+    //     await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
 
-        await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+    //     return order;
+    //   }
 
-        return order;
-      }
+    //   throw AuthenticationError;
+    // },
+    // updateUser: async (parent, args, context) => {
+    //   if (context.user) {
+    //     return await User.findByIdAndUpdate(context.user._id, args, { new: true });
+    //   }
 
-      throw AuthenticationError;
-    },
-    updateUser: async (parent, args, context) => {
-      if (context.user) {
-        return await User.findByIdAndUpdate(context.user._id, args, { new: true });
-      }
+    //   throw AuthenticationError;
+    // },
+    // updateProduct: async (parent, { _id, quantity }) => {
+    //   const decrement = Math.abs(quantity) * -1;
 
-      throw AuthenticationError;
-    },
-    updateProduct: async (parent, { _id, quantity }) => {
-      const decrement = Math.abs(quantity) * -1;
-
-      return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
-    },
-    removeProduct: async (parent, { productId }, context) => {
-      if (context.user) {
+    //   return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+    // },
+    // removeProduct: async (parent, { productId }, context) => {
+    //   if (context.user) {
         
 
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $pull: { savedProduct: {productId} } }
-        );
+    //     await User.findOneAndUpdate(
+    //       { _id: context.user._id },
+    //       { $pull: { savedProduct: {productId} } }
+    //     );
 
-        return productId;
-      }
-      throw AuthenticationError;
-    },
+    //     return productId;
+    //   }
+    //   throw AuthenticationError;
+    // },
  
   }
 };
