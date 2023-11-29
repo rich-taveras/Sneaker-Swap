@@ -7,6 +7,9 @@ const resolvers = {
     categories: async () => {
       return await Category.find();
     },
+    allProducts: async () => {
+      return await Product.find();
+    },
     products: async (parent, { category, model, brand }) => {
       const params = {};
 

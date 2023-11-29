@@ -17,20 +17,20 @@ query Products($category: ID) {
 `;
 
 export const QUERY_CHECKOUT = gql`
-  query getCheckout($products: [ProductInput]) {
-    checkout(products: $products) {
-      session
-    }
+query Checkout($products: [ProductInput]) {
+  checkout(products: $products) {
+    session
   }
+}
 `;
 
 export const QUERY_ALL_PRODUCTS = gql`
-query Products($category: ID) {
-  products(category: $category) {
+query AllProducts {
+  allProducts {
     _id
     brand
     category {
-      name
+      _id
     }
     image
     model
@@ -63,6 +63,20 @@ query User {
         price
         size
       }
+    }
+  }
+}
+`;
+
+export const QUERY_ORDER = gql`
+query Order($id: ID!) {
+  order(_id: $id) {
+    _id
+    products {
+      price
+      brand
+      model
+      size
     }
   }
 }

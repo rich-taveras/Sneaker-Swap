@@ -49,6 +49,7 @@ const typeDefs = `
 
   type Query {
     categories: [Category]
+    allProducts: [Product]
     products(category: ID, model: String, brand: String): [Product]
     product(_id: ID!): Product
     user: User
