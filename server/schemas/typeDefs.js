@@ -40,7 +40,8 @@ const typeDefs = `
   input ProductInput {
     _id: ID
     purchaseQuantity: Int
-    name: String
+    model: String
+    brand: String
     image: String
     price: Float
     quantity: Int
@@ -48,6 +49,7 @@ const typeDefs = `
 
   type Query {
     categories: [Category]
+    allProducts: [Product]
     products(category: ID, model: String, brand: String): [Product]
     product(_id: ID!): Product
     user: User
