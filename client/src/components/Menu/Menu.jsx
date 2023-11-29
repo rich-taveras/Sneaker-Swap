@@ -17,9 +17,9 @@ const Menu = ({ open, ...props }) => {
       <ul className="list-group mt-3">
         <li className="list-group-item mb-1">Home</li>
         <li className="list-group-item mb-1">Shop</li>
-        <li className="list-group-item mb-1">Men</li>
-        <li className="list-group-item mb-1">Woman</li>
-        <li className="list-group-item mb-1">My Wishlist</li>
+        <li className="list-group-item mb-1">Mens</li>
+        <li className="list-group-item mb-1">Womens</li>
+        <li className="list-group-item mb-1">Kids</li>
       </ul>
       <form className="col-12">
         <div className="mb-3">
