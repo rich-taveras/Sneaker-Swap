@@ -36,9 +36,9 @@ const Cart = () => {
     }
   }, [state.cart.length, dispatch]);
 
-  function toggleCart() {
-    dispatch({ type: TOGGLE_CART });
-  }
+  // function toggleCart() {
+  //   dispatch({ type: TOGGLE_CART });
+  // }
 
   function calculateTotal() {
     let sum = 0;

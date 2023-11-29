@@ -14,7 +14,7 @@ export function StarRating() {
   return (
     <div className='App col-7'  style={{scale:"0.5"}}>
       {/* set initial value */}
-      <Rating onClick={handleRating} initialValue={Math.floor(Math.random() * 5)} />
+      <Rating onClick={handleRating} initialValue={3} />
     </div>
   )
 

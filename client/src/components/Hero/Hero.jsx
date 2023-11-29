@@ -1,10 +1,13 @@
 import "../Hero/Hero.css";
 import "../Hero/media.css"
 
+
 const Hero = () => {
+
   return (
+  
     <>
-    
+ 
       <div id="carouselExampleDark" className=" col-12 carousel carousel-dark slide custom-main-section carousel-fade" data-bs-ride="carousel">
   <div className="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>

@@ -11,6 +11,9 @@ import Cart from "../components/Cart";
 import ProductList from "../components/ProductList";
 
 const Home = () => {
+
+ 
+
   return (
     <>
     <NavBar/>
@@ -21,6 +24,7 @@ const Home = () => {
     <ImageHooded/>
     <ShopHero/>
     <Footer/>
+   
     </>
   );
 };
