@@ -15,11 +15,11 @@ const Menu = ({ open, ...props }) => {
         </button>
       </div>
       <ul className="list-group mt-3">
-        <li className="list-group-item mb-1">Home</li>
-        <li className="list-group-item mb-1">Shop</li>
-        <li className="list-group-item mb-1">Mens</li>
-        <li className="list-group-item mb-1">Womens</li>
-        <li className="list-group-item mb-1">Kids</li>
+        <a href="/"><li className="list-group-item mb-1">Home</li></a>
+        <a href="/CategoryPage"><li className="list-group-item mb-1">Shop</li></a>
+        <a href="/CategoryPage"><li className="list-group-item mb-1">Mens</li></a>
+        <a href="/CategoryPage"><li className="list-group-item mb-1">Womens</li></a>
+        <a href="/CategoryPage"><li className="list-group-item mb-1">Kids</li></a>
       </ul>
       <form className="col-12">
         <div className="mb-3">

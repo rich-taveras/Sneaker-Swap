@@ -10,6 +10,7 @@ import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import CategoryPage from './pages/CategoryPage'
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 
@@ -29,6 +30,9 @@ const router = createBrowserRouter([
         path: '/signup',
         element: <Signup />
       }, {
+        path: '/CategoryPage',
+        element: <CategoryPage />
+      },{
         path: '/success',
         element: <Success />
       }, {
