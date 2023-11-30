@@ -12,7 +12,7 @@ const LoginHero = (prop) => {
       mainControls.start("visible");
     }
   });
-
+  console.log("test");
   return (
     <>
     <div className="col-12 mt-5 d-flex justify-content-center">
