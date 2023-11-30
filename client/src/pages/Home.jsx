@@ -9,6 +9,7 @@ import Footer from "../components/Footer/Footer";
 import ShopHero from "../components/ShopHero/ShopHero";
 import Cart from "../components/Cart";
 import ProductList from "../components/ProductList";
+import Nike from "../components/Nike/Nike";
 
 const Home = () => {
 
@@ -22,6 +23,7 @@ const Home = () => {
     <NewArrivalTxt/>
     <ProductList/>
     <ImageHooded/>
+    <Nike/>
     <ShopHero/>
     <Footer/>
    

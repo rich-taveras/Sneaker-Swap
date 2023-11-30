@@ -29,13 +29,13 @@ const Cards = () => {
       <motion.section
         ref={ref}
         variants={{
-          hidden: { opacity: 0, x: 75 },
-          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0, y: 75 },
+          visible: { opacity: 1, y: 0 },
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.25 }}
-        className="d-flex flex-row col-12"
+        transition={{ type: "spring", stiffness: 50, damping: 10, }}
+        className="d-flex flex-row col-12 position-relative z-1"
       >
         <Card1 url={imgCard1} />
         <Card2 url={imgCard2} />
