@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
+import LoginHero from '../components/LoginHero/LoginHero';
 
 function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -30,15 +31,16 @@ function Signup(props) {
     });
   };
 
-  return (
-    <div className="container my-1">
-      <Link to="/login">← Go to Login</Link>
+  const signUpImg = "https://eurotas-demo.myshopify.com/cdn/shop/files/banner-v7-img1.jpg?v=1613762451"
 
-      <h2>Signup</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="firstName">First Name:</label>
+  return (
+    <>
+    <div className="col-12 d-flex justify-content-center">
+      <form onSubmit={handleFormSubmit} className='mt-5'>
+        <div className="mb-3 mt-5">
+          <label htmlFor="firstName" className='form-label'>First Name:</label>
           <input
+          className='form-control'
             placeholder="First"
             name="firstName"
             type="firstName"
@@ -46,9 +48,10 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="lastName">Last Name:</label>
+        <div className="mb-3">
+          <label htmlFor="lastName" className='form-label'>Last Name:</label>
           <input
+           className='form-control'
             placeholder="Last"
             name="lastName"
             type="lastName"
@@ -56,9 +59,10 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email:</label>
+        <div className="mb-3">
+          <label htmlFor="email" className='form-label'>Email:</label>
           <input
+          className='form-control'
             placeholder="youremail@test.com"
             name="email"
             type="email"
@@ -66,9 +70,10 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
+        <div className="mb-3">
+          <label htmlFor="pwd" className='form-label'>Password:</label>
           <input
+           className='form-control'
             placeholder="******"
             name="password"
             type="password"
@@ -76,11 +81,15 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
+        <div className="text-center">
+        <button type="submit" className="btn btn-primary">Submit</button>
         </div>
       </form>
+
+      
     </div>
+    <LoginHero img={signUpImg}/>
+    </>
   );
 }
 

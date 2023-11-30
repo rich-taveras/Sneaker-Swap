@@ -45,10 +45,11 @@ function CategoryMenu() {
   };
 
   return (
+    <>
     <div>
       <ul className="list-group">
         
-        <Link className="text-center m-3" to="/"><button className="btnMenu" onClick={() => {handleClick('');}}>Home<span className="first spanMenu"></span>
+        <Link key={"home"} className="text-center m-3" to="/"><button className="btnMenu" onClick={() => {handleClick('');}}>Home<span className="first spanMenu"></span>
       <span className="second spanMenu"></span>
       <span className="third spanMenu"></span>
       <span className="fourth spanMenu"></span></button></Link>
@@ -72,6 +73,7 @@ function CategoryMenu() {
       ))}
       </ul>
     </div>
+    </>
   );
 }
 
