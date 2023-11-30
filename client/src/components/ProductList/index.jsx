@@ -6,6 +6,8 @@ import { useQuery } from '@apollo/client';
 import { QUERY_PRODUCTS } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
+import { motion } from "framer-motion";
+
 
 
 function ProductList() {
@@ -45,13 +47,15 @@ function ProductList() {
     );
    
   }
-
+ 
   return (
     <div className="col-12">
       {state.products.length ? (
         <section className="d-flex flex-row col-12 custom-media justify-content-center">
           {filterProducts().map((product) => (
-            <ProductItem
+            
+          
+            <ProductItem           
               key={product._id}
               _id={product._id}
               brand={product.brand}

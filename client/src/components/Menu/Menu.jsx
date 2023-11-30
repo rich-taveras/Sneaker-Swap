@@ -1,5 +1,6 @@
 import { bool } from "prop-types";
 import { StyledMenu } from "./Menu.styled";
+import CategoryMenu from "../CategoryMenu";
 
 const Menu = ({ open, ...props }) => {
   const isHidden = open ? true : false;
@@ -14,13 +15,7 @@ const Menu = ({ open, ...props }) => {
           Log In
         </button>
       </div>
-      <ul className="list-group mt-3">
-        <li className="list-group-item mb-1">Home</li>
-        <li className="list-group-item mb-1">Shop</li>
-        <li className="list-group-item mb-1">Mens</li>
-        <li className="list-group-item mb-1">Womens</li>
-        <li className="list-group-item mb-1">Kids</li>
-      </ul>
+     <CategoryMenu/>
       <form className="col-12">
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">
