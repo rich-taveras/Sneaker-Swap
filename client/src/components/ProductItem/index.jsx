@@ -8,11 +8,10 @@ import Popovers from "../Popover/Popovers";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
 
-  const { _id, category, image, model, price} = item;
+  const { _id, category, image, model, price } = item;
 
   const { cart } = state;
 
@@ -38,7 +37,6 @@ function ProductItem(item) {
     }
   };
 
-
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -50,45 +48,35 @@ function ProductItem(item) {
     }
   }, [isInView]);
 
- 
-
-
-
-
-
-
   return (
     <motion.div
-        ref={ref}
-        variants={{
-          hidden: { opacity: 0, y: 75 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration: 1, delay: 0.25 }}
-        
-
-
-
+      ref={ref}
+      variants={{
+        hidden: { opacity: 0, y: 75 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+      transition={{ duration: 1, delay: 0.25 }}
       className="card m-3 border-0"
     >
-      <motion.div className="card"
-      whileHover={{ scale: 1.1 }}
-      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+      <motion.div
+        className="card"
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
       >
-      <img src={image} className="" alt="..." />
-      <div className="card-body text-start">
-        <div className="d-flex flex-row justify-content-between">
-          <span className="col-4">{category}</span>
-          <StarRating />
+        <img src={image} className="" alt="..." />
+        <div className="card-body text-start">
+          <div className="d-flex flex-row justify-content-between">
+            <span className="col-4">{category}</span>
+            <StarRating />
+          </div>
+          <h5>{model}</h5>
+          <div className="d-flex justify-content-between">
+            <span>${price}</span>
+            <Popovers addToCart={addToCart} />
+          </div>
         </div>
-        <h5>{model}</h5>
-        <div className="d-flex justify-content-between">
-          <span>${price}</span>
-          <Popovers addToCart={addToCart} />
-        </div>
-      </div>
       </motion.div>
     </motion.div>
 

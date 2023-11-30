@@ -13,6 +13,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
+import Mens from './pages/Mens.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,12 @@ const router = createBrowserRouter([
       }, {
         path: '/login',
         element: <Login />
-      }, {
+      }, 
+      {
+        path: '/Mens',
+        element: <Mens/>
+      },
+      {
         path: '/signup',
         element: <Signup />
       }, {

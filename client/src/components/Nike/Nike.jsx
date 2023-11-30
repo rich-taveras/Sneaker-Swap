@@ -15,7 +15,7 @@ const Nike =()=>{
     });
 
     return(
-<section className="col-12 d-flex justify-content-center position-relative">
+<section className="col-12 d-flex mt-5 justify-content-center position-relative">
     <motion.div 
      ref={ref}
      variants={{
