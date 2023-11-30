@@ -6,7 +6,7 @@ export function pluralize(name, count) {
 }
 
 export function idbPromise(storeName, method, object) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const request = window.indexedDB.open('shop-shop', 1);
     let db, tx, store;
     request.onupgradeneeded = function(e) {
@@ -35,6 +35,7 @@ export function idbPromise(storeName, method, object) {
           resolve(object);
           break;
         case 'get':
+          // eslint-disable-next-line no-case-declarations
           const all = store.getAll();
           all.onsuccess = function() {
             resolve(all.result);

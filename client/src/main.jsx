@@ -14,6 +14,8 @@ import Signup from './pages/Signup';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 import Mens from './pages/Mens.jsx';
+import Womens from './pages/Womens.jsx';
+import Kids from './pages/Kids.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +33,13 @@ const router = createBrowserRouter([
       {
         path: '/Mens',
         element: <Mens/>
+      },
+      {
+        path: '/Womens',
+        element: <Womens/>
+      }, {
+        path: '/Kids',
+        element: <Kids/>
       },
       {
         path: '/signup',
