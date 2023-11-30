@@ -1,7 +1,7 @@
 // LoginForm.js
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { ADD_USER } from './mutations'; // Importa la definición de la mutación
+// import { ADD_USER } from './mutations'; 
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
