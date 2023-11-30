@@ -1,6 +1,7 @@
 
 import ReactDOM from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -8,8 +9,8 @@ import App from './App.jsx';
 import Home from './pages/Home';
 import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
+import Login from './pages/Login.jsx';
+import Signup from './pages/Signup.jsx';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 
