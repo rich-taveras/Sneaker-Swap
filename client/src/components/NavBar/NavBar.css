@@ -1,0 +1,5 @@
+.custom-nav{
+    position: fixed;
+    background-color: grey;
+    z-index: 4;
+}

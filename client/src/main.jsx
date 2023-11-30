@@ -1,6 +1,7 @@
 
 import ReactDOM from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -10,9 +11,11 @@ import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import CategoryPage from './pages/CategoryPage'
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
+import Mens from './pages/Mens.jsx';
+import Womens from './pages/Womens.jsx';
+import Kids from './pages/Kids.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,13 +29,23 @@ const router = createBrowserRouter([
       }, {
         path: '/login',
         element: <Login />
+      }, 
+      {
+        path: '/Mens',
+        element: <Mens/>
+      },
+      {
+        path: '/Womens',
+        element: <Womens/>
       }, {
+        path: '/Kids',
+        element: <Kids/>
+      },
+      {
         path: '/signup',
         element: <Signup />
-      }, {
-        path: '/CategoryPage',
-        element: <CategoryPage />
-      },{
+      },
+      {
         path: '/success',
         element: <Success />
       }, {

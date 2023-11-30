@@ -1,6 +1,6 @@
 const Footer = ()=>{
     return(
-        <section className="px-5 pt-5 col-12 bg-dark text-light">
+        <section className="px-5 pt-5 mt-5 col-12 bg-dark text-light">
             <div className="d-flex flex-row justify-content-between">
             <div className="d-flex flex-row col-6">
                 <h4>Contact</h4>

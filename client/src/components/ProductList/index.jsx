@@ -8,6 +8,8 @@ import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
 
 
+
+
 function ProductList() {
   const [state, dispatch] = useStoreContext();
 
@@ -35,23 +37,25 @@ function ProductList() {
   }, [data, loading, dispatch]);
 
   function filterProducts() {
-    // if (!currentCategory) {
+    if (!currentCategory) {
       
       return state.products;
-    // }
+    }
 
-    // return state.products.filter(
-    //   (product) => product.category._id === currentCategory
-    // );
+    return state.products.filter(
+      (product) => product.category._id === currentCategory
+    );
    
   }
-
+ 
   return (
     <div className="col-12">
       {state.products.length ? (
         <section className="d-flex flex-row col-12 custom-media justify-content-center">
           {filterProducts().map((product) => (
-            <ProductItem
+            
+          
+            <ProductItem           
               key={product._id}
               _id={product._id}
               brand={product.brand}
@@ -65,7 +69,7 @@ function ProductList() {
           ))}
         </section>
       ) : (
-        <h3>You haven't added any products yet!</h3>
+        <h3>You haven t added any products yet!</h3>
       )}
       {loading ? <img src={spinner} alt="loading" /> : null}
     </div>
