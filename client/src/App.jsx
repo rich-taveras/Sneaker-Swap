@@ -8,6 +8,8 @@ import {
 import { setContext } from "@apollo/client/link/context";
 
 import { StoreProvider } from "./utils/GlobalState";
+import NavBar from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
 
 
 const httpLink = createHttpLink({
@@ -35,9 +37,9 @@ function App() {
   
     <ApolloProvider client={client}>
       <StoreProvider>
-      
+      <NavBar/>
           <Outlet />
-         
+         <Footer/>
       </StoreProvider>
     </ApolloProvider>
     
