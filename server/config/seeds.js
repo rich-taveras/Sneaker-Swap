@@ -17,6 +17,33 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
+      brand: 'Vans',
+      model: 
+        'Ward Low Top Sneaker',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/43/34/6/43346_right_feed1000.jpg',
+      category: categories[0]._id,
+      price: 75,
+      size: 10
+    },
+    {
+      brand: 'Sperry',
+      model: 
+        'Leeward 2 Eye Boat Shoe',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/90/50/3/90503_right_feed1000.jpg',
+      category: categories[0]._id,
+      price: 100,
+      size: 11
+    },
+    {
+      brand: 'Cole Haan',
+      model: 
+        'ZeroGrand All Day Runner',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/18/27/8/18278_right_feed1000.jpg',
+      category: categories[0]._id,
+      price: 90,
+      size: 10
+    },
+    {
       brand: 'Nike',
       model: 
         'Air Jourdan XXXIII',
@@ -233,6 +260,33 @@ db.once('open', async () => {
       size: 6
     },
     {
+      brand: 'XOXO',
+      model: 
+        'Marisa Tall Boot',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/45/46/6/45466_right_feed1000.jpg',
+      category: categories[1]._id,
+      price: 60,
+      size: 7
+    },
+    {
+      brand: 'Franco Sarto',
+      model: 
+        'Balin Platform Loafer',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/15/55/3/15553_right_feed1000.jpg',
+      category: categories[1]._id,
+      price: 110,
+      size: 5
+    },
+    {
+      brand: 'Converse',
+      model: 
+        'Chuck Taylor All Star Madison High Top Sneaker',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/45/65/2/45652_right_feed1000.jpg',
+      category: categories[1]._id,
+      price: 65,
+      size: 6
+    },
+    {
       brand: 'Skechers',
       model: 
         'Hazel Rhinestone Sneaker',
@@ -348,6 +402,33 @@ db.once('open', async () => {
       category: categories[2]._id,
       price: 60,
       size: 7
+    },
+    {
+      brand: 'Bearpaw',
+      model: 
+        'Elle Zip Short Water Resistant Boot',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/45/35/7/45357_right_feed1000.jpg',
+      category: categories[2]._id,
+      price: 45,
+      size: 8
+    },
+    {
+      brand: 'PUMA',
+      model: 
+        'Axelion Sneaker',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/36/02/2/36022_right_feed1000.jpg',
+      category: categories[2]._id,
+      price: 65,
+      size: 6
+    },
+    {
+      brand: 'Under Armour',
+      model: 
+        'Kids Curry 3Z7 Basketball Shoe',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/43/40/7/43407_right_feed1000.jpg',
+      category: categories[2]._id,
+      price: 75,
+      size: 6
     }
   ]);
 
