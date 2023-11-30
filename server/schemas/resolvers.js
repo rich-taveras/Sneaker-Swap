@@ -7,9 +7,6 @@ const resolvers = {
     categories: async () => {
       return await Category.find();
     },
-    allProducts: async () => {
-      return await Product.find();
-    },
     products: async (parent, { category, model, brand }) => {
       const params = {};
 
@@ -40,9 +37,10 @@ const resolvers = {
           path: 'orders.products',
           populate: 'category'
         });
-        const token = signToken(user);
 
-        return  user;
+        user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+
+        return user;
       }
 
       throw AuthenticationError;
@@ -71,10 +69,12 @@ const resolvers = {
           price_data: {
             currency: 'usd',
             product_data: {
-              name: product.model
+              model: product.model,
+              brand: product.brand,
+              image: product.image
             },
             unit_amount: product.price * 100,
-            },
+          },
           quantity: product.purchaseQuantity,
         });
       }
@@ -91,11 +91,6 @@ const resolvers = {
     },
   },
   Mutation: {
-    addUser: async (parent, { firstName, lastName, email, password }) => {
-      const user = await User.create({ firstName, lastName, email, password });
-      const token = signToken(user);
-      return { token, user };
-    },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
@@ -105,51 +100,56 @@ const resolvers = {
 
       const correctPw = await user.isCorrectPassword(password);
 
-      // if (!correctPw) {
-      //   throw AuthenticationError;
-      // }
+      if (!correctPw) {
+        throw AuthenticationError;
+      }
 
       const token = signToken(user);
 
       return { token, user };
     },
-    
-    // addOrder: async (parent, { products }, context) => {
-    //   if (context.user) {
-    //     const order = new Order({ products });
+    addUser: async (parent, args) => {
+      const user = await User.create(args);
+      const token = signToken(user);
 
-    //     await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+      return { token, user };
+    },
+    addOrder: async (parent, { products }, context) => {
+      if (context.user) {
+        const order = new Order({ products });
 
-    //     return order;
-    //   }
+        await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
 
-    //   throw AuthenticationError;
-    // },
-    // updateUser: async (parent, args, context) => {
-    //   if (context.user) {
-    //     return await User.findByIdAndUpdate(context.user._id, args, { new: true });
-    //   }
+        return order;
+      }
 
-    //   throw AuthenticationError;
-    // },
-    // updateProduct: async (parent, { _id, quantity }) => {
-    //   const decrement = Math.abs(quantity) * -1;
+      throw AuthenticationError;
+    },
+    updateUser: async (parent, args, context) => {
+      if (context.user) {
+        return await User.findByIdAndUpdate(context.user._id, args, { new: true });
+      }
 
-    //   return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
-    // },
-    // removeProduct: async (parent, { productId }, context) => {
-    //   if (context.user) {
+      throw AuthenticationError;
+    },
+    updateProduct: async (parent, { _id, quantity }) => {
+      const decrement = Math.abs(quantity) * -1;
+
+      return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+    },
+    removeProduct: async (parent, { productId }, context) => {
+      if (context.user) {
         
 
-    //     await User.findOneAndUpdate(
-    //       { _id: context.user._id },
-    //       { $pull: { savedProduct: {productId} } }
-    //     );
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { savedProduct: {productId} } }
+        );
 
-    //     return productId;
-    //   }
-    //   throw AuthenticationError;
-    // },
+        return productId;
+      }
+      throw AuthenticationError;
+    },
  
   }
 };

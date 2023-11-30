@@ -40,8 +40,7 @@ const typeDefs = `
   input ProductInput {
     _id: ID
     purchaseQuantity: Int
-    model: String
-    brand: String
+    name: String
     image: String
     price: Float
     quantity: Int
@@ -49,7 +48,6 @@ const typeDefs = `
 
   type Query {
     categories: [Category]
-    allProducts: [Product]
     products(category: ID, model: String, brand: String): [Product]
     product(_id: ID!): Product
     user: User
@@ -58,8 +56,13 @@ const typeDefs = `
   }
 
   type Mutation {
-    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
+    addOrder(products: [ID]!): Order
+    updateUser(firstName: String, lastName: String, email: String, password: String): User
+    updateProduct(_id: ID!, quantity: Int!): Product
+    removeProduct(productId: String!): User
+    
   }
 `;
 
