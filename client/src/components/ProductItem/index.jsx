@@ -3,7 +3,7 @@
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
-
+import { StarRating } from "../StarRating/StarRating";
 import Popovers from "../Popover/Popovers";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
