@@ -1,4 +1,4 @@
-import "./LoginHero.css";
+
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 const LoginHero = (prop) => {
