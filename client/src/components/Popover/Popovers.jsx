@@ -9,12 +9,9 @@ const Popovers = (prop) => {
   // });
 
   return (
-    
-      <button type="button" className="btn btn-primary" onClick={prop.addToCart}
-      >
-        <i className="fa-solid fa-cart-arrow-down"></i>
-      </button>
-    
+    <button type="button" className="btn btn-primary" onClick={prop.addToCart}>
+      <i className="fa-solid fa-cart-arrow-down"></i>
+    </button>
   );
 };
 export default Popovers;

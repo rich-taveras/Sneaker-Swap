@@ -1,4 +1,3 @@
-
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
 import FocusLock from "react-focus-lock";
@@ -15,7 +14,7 @@ const MenuHamburger = () => {
   useOnClickOutside(node, () => setOpen(false));
   return (
     <>
-      <ThemeProvider theme={theme}>        
+      <ThemeProvider theme={theme}>
         <div ref={node}>
           <FocusLock disabled={!open}>
             <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
