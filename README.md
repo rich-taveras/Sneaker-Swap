@@ -56,7 +56,10 @@ To get the development environment running, follow these steps:
 
 By contributing to this project, you can help enhance the efficiency and effectiveness of generating high-quality Web applications for a wide range of open-source projects. Your contributions will be valuable in promoting collaboration and fostering a developer-friendly environment.
   
+## Live Demo 
+![SneakerSwap Logo](/Sneaker-Swap/client/public/images/demo%20(1).gif)
 
+<https://sneaker-swap-8acdfdc3d4a4.herokuapp.com/>
 ## Features
 
 - Community-driven marketplace
@@ -74,6 +77,8 @@ By contributing to this project, you can help enhance the efficiency and effecti
 
 ## GitHub
 (https://github.com/rich-taveras/Sneaker-Swap)
+
+
 
 ## Test
   To run tests, use the following command:
