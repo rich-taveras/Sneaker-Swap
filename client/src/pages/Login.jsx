@@ -4,6 +4,7 @@ import { LOGIN } from "../utils/mutations";
 import Auth from "../utils/auth";
 import LoginHero from "../components/LoginHero/LoginHero";
 
+// eslint-disable-next-line no-unused-vars
 function Login(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN);
