@@ -1,6 +1,6 @@
 import Card1 from "./Card1/Card1";
 import Card2 from "./Card2/Card2";
-import "./Cards.css"
+import "./Cards.css";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 const Cards = () => {
@@ -35,7 +35,7 @@ const Cards = () => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ type: "spring", stiffness: 50, damping: 10, }}
+        transition={{ type: "spring", stiffness: 50, damping: 10 }}
         className="d-flex flex-row col-12 position-relative z-1"
       >
         <Card1 url={imgCard1} />

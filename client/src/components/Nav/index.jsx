@@ -6,14 +6,14 @@ function Nav() {
   const logIn = "Log In";
   const logout = "Logout";
   const orderHistory = "Order History";
-  const auth = () => Auth.logout()
+  const auth = () => Auth.logout();
 
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
         <>
           <ButtonLogIn text={orderHistory} link={"/orderHistory"} />
-          <ButtonLogIn text={logout} link={"/"} auth = {auth} />
+          <ButtonLogIn text={logout} link={"/"} auth={auth} />
         </>
       );
     } else {

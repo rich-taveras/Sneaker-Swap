@@ -43,9 +43,8 @@ const ShoesCard = () => {
                 <div className="card-body text-start">
                   <div className="d-flex flex-row justify-content-between">
                     <span className="col-4">Class of the Shoe</span>
-                    
-                      <StarRating />
-                    
+
+                    <StarRating />
                   </div>
                   <h5>Name of the shoe</h5>
                   <div className="d-flex justify-content-between">
