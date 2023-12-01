@@ -1,6 +1,7 @@
+import "./Nike.css";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
-const ImageHooded = () => {
+const Nike = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -13,7 +14,7 @@ const ImageHooded = () => {
   });
 
   return (
-    <section className="my-5 col-12">
+    <section className="col-12 d-flex mt-5 justify-content-center position-relative">
       <motion.div
         ref={ref}
         variants={{
@@ -22,16 +23,20 @@ const ImageHooded = () => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ type: "spring", stiffness: 40, damping: 12 }}
-        className="container"
+        transition={{ type: "spring", stiffness: 40, damping: 10 }}
+        className="position-relative col-10"
       >
         <img
-          src="https://eurotas-demo.myshopify.com/cdn/shop/files/banner-v4-img1_d7d23fbd-20f6-45bc-b2f9-453de902c514.jpg?v=1613790783"
-          className="img-fluid"
+          src="https://eurotas-demo.myshopify.com/cdn/shop/files/banner-v6-img1.jpg?v=1613749389"
           alt=""
         />
+        <motion.div className="position-absolute z-1 custom-nike-txt">
+          <h6>Basketball Shoe</h6>
+          <h1>Nike Just Do It</h1>
+          <h5>Season Off 30--10%</h5>
+        </motion.div>
       </motion.div>
     </section>
   );
 };
-export default ImageHooded;
+export default Nike;

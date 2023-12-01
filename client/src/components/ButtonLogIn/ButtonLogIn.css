@@ -1,0 +1,14 @@
+.box {
+    border: none;
+    width: 8vw;
+    padding: 5px 0px 5px 0px;
+    font-size: 100%;    
+    background: transparent;
+    color: #ffa500;
+    text-transform: uppercase;
+    border: 3px solid #ffa500; 
+    text-transform: uppercase;
+  
+    border-radius: 50px;
+  }
+  

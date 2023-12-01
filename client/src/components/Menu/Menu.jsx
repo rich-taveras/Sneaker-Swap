@@ -1,8 +1,13 @@
 import { bool } from "prop-types";
 import { StyledMenu } from "./Menu.styled";
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+=======
+import CategoryMenu from "../CategoryMenu";
+import Nav from "../Nav";
+>>>>>>> 86917435f1d7d9879226e614388a0e37ed0e0269
 
 const Menu = ({ open, ...props }) => {
   const isHidden = open ? true : false;
@@ -10,53 +15,18 @@ const Menu = ({ open, ...props }) => {
   return (
     <StyledMenu open={open} aria-hidden={!open} {...props}>
       <div className="d-flex justify-content-evenly mt-5">
+<<<<<<< HEAD
         <button type="button" className="btn btn-outline-secondary">
           Menu
         </button>
         <Link to="/login" className="btn btn-outline-secondary">
           Log In
         </Link>
+=======
+        <Nav />
+>>>>>>> 86917435f1d7d9879226e614388a0e37ed0e0269
       </div>
-      <ul className="list-group mt-3">
-        <li className="list-group-item mb-1">Home</li>
-        <li className="list-group-item mb-1">Shop</li>
-        <li className="list-group-item mb-1">Men</li>
-        <li className="list-group-item mb-1">Woman</li>
-        <li className="list-group-item mb-1">My Wishlist</li>
-      </ul>
-      <form className="col-12">
-        <div className="mb-3">
-          <label htmlFor="exampleInputEmail1" className="form-label">
-            Email address
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="exampleInputPassword1" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="exampleInputPassword1"
-          />
-        </div>
-        <div>
-          <span>Forgot your password?</span>
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </form>
-      <ul className="list-group mt-3">
-        <li className="list-group-item"><a href="">Create an account</a></li>
-      </ul>
-      
+      <CategoryMenu />
     </StyledMenu>
   );
 };
