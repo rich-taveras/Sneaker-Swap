@@ -1,6 +1,6 @@
 :root {
   --primary: #232F3E;
-  --secondary: #F3A847;
+  /* --secondary: #F3A847; */
   --tertiary: #B12704;
   --light: #fafafa;
   --dark: #272f32;
@@ -87,7 +87,7 @@ header a {
   color: var(--light);
 }
 
-button {
+/* button {
   font-size: 1rem;
   text-decoration: none;
   padding: 0.25rem 1rem;
@@ -97,16 +97,16 @@ button {
   cursor: pointer;
   margin: 0 1px;
   background-color: var(--secondary);
-}
+} */
 
-button:hover {
+/* button:hover {
   opacity: .8;
 }
 
 button[disabled] {
   cursor: default;
   opacity: .8;
-}
+} */
 
 img {
   max-width: 100%;
