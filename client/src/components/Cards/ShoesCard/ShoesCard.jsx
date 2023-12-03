@@ -1,5 +1,5 @@
 import "./ShoesCard.css";
-import { StarRating } from "../../starRating/StarRating";
+import { StarRating } from "../../StarRating/StarRating";
 const ShoesCard = () => {
   const shoesCard = [
     {
