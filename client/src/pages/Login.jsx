@@ -80,7 +80,7 @@ function Login(props) {
           </button>
         </form>
       </section>
-      {/* <LoginHero img={loginImgUrl} /> */}
+      <LoginHero img={loginImgUrl} />
     </>
   );
 }
