@@ -1,6 +1,6 @@
 :root {
   --primary: #232F3E;
-  --secondary: #F3A847;
+  /* --secondary: #F3A847; */
   --tertiary: #B12704;
   --light: #fafafa;
   --dark: #272f32;
@@ -86,8 +86,6 @@ header {
 header a {
   color: var(--light);
 }
-
-
 
 img {
   max-width: 100%;
