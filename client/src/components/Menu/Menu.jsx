@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { bool } from 'prop-types';
 import styled from 'styled-components';
@@ -39,6 +40,12 @@ const StyledButton = styled.button`
     background-color: ${({ primary }) => (primary ? '#0056b3' : '#c82333')};
   }
 `;
+=======
+import { bool } from "prop-types";
+import { StyledMenu } from "./Menu.styled";
+import CategoryMenu from "../CategoryMenu";
+import Nav from "../Nav";
+>>>>>>> f03d7cf2b9963433f68644c9716b3f98f900fad5
 
 const Menu = ({ open, ...props }) => {
   const [isLoginFormVisible, setLoginFormVisible] = useState(false);
@@ -63,6 +70,7 @@ const Menu = ({ open, ...props }) => {
   };
 
   return (
+<<<<<<< HEAD
     <div onMouseEnter={handleMouseEnter}>
       <StyledMenu open={open} aria-hidden={!open} {...props}>
         <div className="d-flex justify-content-evenly mt-5">
@@ -119,6 +127,14 @@ const Menu = ({ open, ...props }) => {
         )}
       </StyledMenu>
     </div>
+=======
+    <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
+      <div className="d-flex justify-content-evenly mt-5">
+        <Nav />
+      </div>
+      <CategoryMenu />
+    </StyledMenu>
+>>>>>>> f03d7cf2b9963433f68644c9716b3f98f900fad5
   );
 };
 

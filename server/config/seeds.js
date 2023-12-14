@@ -17,6 +17,33 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
+      brand: 'Vans',
+      model: 
+        'Ward Low Top Sneaker',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/43/34/6/43346_right_feed1000.jpg',
+      category: categories[0]._id,
+      price: 75,
+      size: 10
+    },
+    {
+      brand: 'Sperry',
+      model: 
+        'Leeward 2 Eye Boat Shoe',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/90/50/3/90503_right_feed1000.jpg',
+      category: categories[0]._id,
+      price: 100,
+      size: 11
+    },
+    {
+      brand: 'Cole Haan',
+      model: 
+        'ZeroGrand All Day Runner',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/18/27/8/18278_right_feed1000.jpg',
+      category: categories[0]._id,
+      price: 90,
+      size: 10
+    },
+    {
       brand: 'Nike',
       model: 
         'Air Jourdan XXXIII',
@@ -24,6 +51,60 @@ db.once('open', async () => {
       category: categories[0]._id,
       price: 115,
       size: 12
+    },
+    {
+      brand: 'Nike',
+      model: 
+        'Air Max Excee',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/33/68/1/33681_right_feed1000.jpg',
+      category: categories[0]._id,
+      price: 95,
+      size: 8
+    },
+    {
+      brand: 'Crocs',
+      model: 
+        'Star Wars Bistro Slip Resistant Clog',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/44/07/1/44071_right_feed1000.jpg',
+      category: categories[0]._id,
+      price: 40,
+      size: 9
+    },
+    {
+      brand: 'Saucony',
+      model: 
+        'Aura TR Wide Trail Running Shoe',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/31/98/4/31984_right_feed1000.jpg',
+      category: categories[0]._id,
+      price: 75,
+      size: 13
+    },
+    {
+      brand: 'New Balance',
+      model: 
+        '520 V8 Wide Running Shoe',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/30/03/9/30039_right_feed1000.jpg',
+      category: categories[0]._id,
+      price: 65,
+      size: 11
+    },
+    {
+      brand: 'Nike',
+      model: 
+        'Air Max Cirro Slide Sandal',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/40/36/5/40365_right_feed1000.jpg',
+      category: categories[0]._id,
+      price: 55,
+      size: 9
+    },
+    {
+      brand: 'Converse',
+      model: 
+        'Berkshire High Top Sneaker Boot',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/35/92/8/35928_right_feed1000.jpg',
+      category: categories[0]._id,
+      price: 90,
+      size: 9
     },
     {
       brand: 'Adidas',
@@ -107,6 +188,114 @@ db.once('open', async () => {
       size: 6
     },
     {
+      brand: 'Nike',
+      model: 
+        'Waffle Debut Retro Sneaker',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/75/52/3/75523_right_feed1000.jpg',
+      category: categories[1]._id,
+      price: 80,
+      size: 10
+    },
+    {
+      brand: 'Cliffs by White Mountain',
+      model: 
+        'Hope Lace Up Hiking Boot',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/46/17/3/46173_right_feed1000.jpg',
+      category: categories[1]._id,
+      price: 85,
+      size: 7
+    },
+    {
+      brand: 'Dr. Martens',
+      model: 
+        'Zavala Combat Boot',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/39/31/0/39310_right_feed1000.jpg',
+      category: categories[1]._id,
+      price: 130,
+      size: 7
+    },
+    {
+      brand: 'Nike',
+      model: 
+        'Giannis Immortality 2 Basketball Shoe',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/95/09/8/95098_right_feed1000.jpg',
+      category: categories[1]._id,
+      price: 85,
+      size: 7
+    },
+    {
+      brand: 'Naturalizer',
+      model: 
+        'Vera Dress Sandal',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/30/78/6/30786_right_feed1000.jpg',
+      category: categories[1]._id,
+      price: 110,
+      size: 8
+    },
+    {
+      brand: 'ASICS',
+      model: 
+        'Contend 8 Running Shoe',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/44/61/4/44614_right_feed1000.jpg',
+      category: categories[1]._id,
+      price: 70,
+      size: 5
+    },
+    {
+      brand: 'Crocs',
+      model: 
+        'Pokemon Classic Clog',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/45/93/0/45930_right_feed1000.jpg',
+      category: categories[1]._id,
+      price: 60,
+      size: 7
+    },
+    {
+      brand: 'Adidas',
+      model: 
+        'Runfalcon 3.0 Running Shoe',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/43/21/5/43215_right_feed1000.jpg',
+      category: categories[1]._id,
+      price: 65,
+      size: 6
+    },
+    {
+      brand: 'XOXO',
+      model: 
+        'Marisa Tall Boot',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/45/46/6/45466_right_feed1000.jpg',
+      category: categories[1]._id,
+      price: 60,
+      size: 7
+    },
+    {
+      brand: 'Franco Sarto',
+      model: 
+        'Balin Platform Loafer',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/15/55/3/15553_right_feed1000.jpg',
+      category: categories[1]._id,
+      price: 110,
+      size: 5
+    },
+    {
+      brand: 'Converse',
+      model: 
+        'Chuck Taylor All Star Madison High Top Sneaker',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/45/65/2/45652_right_feed1000.jpg',
+      category: categories[1]._id,
+      price: 65,
+      size: 6
+    },
+    {
+      brand: 'Skechers',
+      model: 
+        'Hazel Rhinestone Sneaker',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/41/12/7/41127_right_feed1000.jpg',
+      category: categories[1]._id,
+      price: 80,
+      size: 4
+    },
+    {
       brand: 'Timberland',
       model: 
         'Timberland Waterproof Boots',
@@ -122,6 +311,123 @@ db.once('open', async () => {
       image: 'https://media.finishline.com/s/finishline/00C4NBMC_900?$Main$&layer0=[h=245&w=245&bg=rgb(237,237,237)]&h=245&w=245&fmt=webp',
       category: categories[2]._id,
       price: 70,
+      size: 6
+    },
+    {
+      brand: 'Nike',
+      model: 
+        'Kids Court Borough Low Top Sneaker',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/39/11/7/39117_right_feed1000.jpg',
+      category: categories[2]._id,
+      price: 65,
+      size: 4
+    },
+    {
+      brand: 'Hey Dude',
+      model: 
+        'Kids Wendy Slip On Shoe Toddler',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/40/58/0/40580_right_feed1000.jpg',
+      category: categories[2]._id,
+      price: 20,
+      size: 5
+    },
+    {
+      brand: 'Adidas',
+      model: 
+        'Kids Kaptir 3.0 Sneaker',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/42/82/8/42828_right_feed1000.jpg',
+      category: categories[2]._id,
+      price: 70,
+      size: 11
+    },
+    {
+      brand: 'Uner Armour',
+      model: 
+        'Kids Lockdown 6 Basketball Shoe',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/93/12/0/93120_right_feed1000.jpg',
+      category: categories[2]._id,
+      price: 55,
+      size: 6
+    },
+    {
+      brand: 'Dr. Scholls',
+      model: 
+        'Kids Time Off Lace Up Sneaker',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/73/24/0/73240_right_feed1000.jpg',
+      category: categories[2]._id,
+      price: 45,
+      size: 5
+    },
+    {
+      brand: 'Sketchers',
+      model: 
+        'Kids Skech Tracks Sneaker',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/46/28/3/46283_right_feed1000.jpg',
+      category: categories[2]._id,
+      price: 50,
+      size: 7
+    },
+    {
+      brand: 'Converse',
+      model: 
+        'Kids Chuck Taylor All Star Slip On Knit Sneaker',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/44/14/0/44140_right_feed1000.jpg',
+      category: categories[2]._id,
+      price: 45,
+      size: 4
+    },
+    {
+      brand: 'PUMA',
+      model: 
+        'Kids Rebound Layup High Top Sneaker',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/46/23/9/46239_right_feed1000.jpg',
+      category: categories[2]._id,
+      price: 60,
+      size: 6
+    },
+    {
+      brand: 'Adidas',
+      model: 
+        'Kids VL Court 3.0 Sneaker',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/42/00/8/42008_right_feed1000.jpg',
+      category: categories[2]._id,
+      price: 54,
+      size: 6
+    },
+    {
+      brand: 'Heelys',
+      model: 
+        'Kids Pro 20 Skate Sneaker',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/40/74/6/40746_right_feed1000.jpg',
+      category: categories[2]._id,
+      price: 60,
+      size: 7
+    },
+    {
+      brand: 'Bearpaw',
+      model: 
+        'Elle Zip Short Water Resistant Boot',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/45/35/7/45357_right_feed1000.jpg',
+      category: categories[2]._id,
+      price: 45,
+      size: 8
+    },
+    {
+      brand: 'PUMA',
+      model: 
+        'Axelion Sneaker',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/36/02/2/36022_right_feed1000.jpg',
+      category: categories[2]._id,
+      price: 65,
+      size: 6
+    },
+    {
+      brand: 'Under Armour',
+      model: 
+        'Kids Curry 3Z7 Basketball Shoe',
+      image: 'https://www.famousfootwear.com/blob/product-images/20000/43/40/7/43407_right_feed1000.jpg',
+      category: categories[2]._id,
+      price: 75,
       size: 6
     }
   ]);

@@ -6,6 +6,7 @@ query Products($category: ID) {
     _id
     brand
     category {
+      _id
       name
     }
     image
