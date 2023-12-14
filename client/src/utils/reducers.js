@@ -44,6 +44,7 @@ export const reducer = (state, action) => {
       };
 
     case REMOVE_FROM_CART:
+      // eslint-disable-next-line no-case-declarations
       let newState = state.cart.filter((product) => {
         return product._id !== action._id;
       });
