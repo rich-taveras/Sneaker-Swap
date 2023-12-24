@@ -31,13 +31,8 @@ function Signup(prop) {
     });
   };
 
-<<<<<<< HEAD
-  return (
-    <div className="container my-1">
-=======
   const signUpImg =
     "https://eurotas-demo.myshopify.com/cdn/shop/files/banner-v7-img1.jpg?v=1613762451";
->>>>>>> f03d7cf2b9963433f68644c9716b3f98f900fad5
 
   return (
     <>

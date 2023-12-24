@@ -10,11 +10,7 @@ import Home from './pages/Home';
 import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
 import Login from './pages/Login.jsx';
-<<<<<<< HEAD
-import Signup from './pages/Signup.jsx';
-=======
 import Signup from './pages/Signup';
->>>>>>> f03d7cf2b9963433f68644c9716b3f98f900fad5
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 import Mens from './pages/Mens.jsx';

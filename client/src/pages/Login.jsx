@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-import { useState } from 'react';
-import { useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom';
-import { LOGIN } from '../utils/mutations';
-
-import Auth from '../utils/auth';
-=======
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { LOGIN } from "../utils/mutations";
 import Auth from "../utils/auth";
 import LoginHero from "../components/LoginHero/LoginHero";
->>>>>>> f03d7cf2b9963433f68644c9716b3f98f900fad5
 
 // eslint-disable-next-line no-unused-vars
 function Login(props) {
