@@ -148,23 +148,9 @@ const resolvers = {
 
         return productId;
       }
-<<<<<<< HEAD
-
-      const correctPw = await user.isCorrectPassword(password);
-
-      // if (!correctPw) {
-      //   throw AuthenticationError;
-      // }
-
-      const token = signToken(user);
-
-      return { token, user };
-    }
-=======
       throw AuthenticationError;
     },
  
->>>>>>> d024d107f2cd385a5d01ef654d03115234b49417
   }
 };
 
