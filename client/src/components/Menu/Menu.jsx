@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { bool } from "prop-types";
 import { StyledMenu } from "./Menu.styled";
 import CategoryMenu from "../CategoryMenu";
@@ -23,10 +24,11 @@ const Menu = ({ open, ...props }) => {
   };
 
   const handleMouseEnter = () => {
+    // Add functionality here if needed
   };
 
   return (
-    <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
+    <StyledMenu open={open} aria-hidden={!isLoginFormVisible} {...props}>
       <div className="d-flex justify-content-evenly mt-5">
         <Nav />
       </div>
