@@ -8,7 +8,8 @@
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
+    "build": "cd client && npm run build",
+    "deploy": "vercel --prod"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +19,10 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
+    "esbuild": "^0.19.10",
     "framer-motion": "^10.16.16",
+    "prop-types": "^15.8.1",
+    "styled-components": "^6.1.6",
     "vite": "^5.0.4"
   }
 }
