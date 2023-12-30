@@ -7,9 +7,6 @@ const resolvers = {
     categories: async () => {
       return await Category.find();
     },
-    allProducts: async () => {
-      return await Product.find();
-    },
     products: async (parent, { category, model, brand }) => {
       const params = {};
 
@@ -40,9 +37,10 @@ const resolvers = {
           path: 'orders.products',
           populate: 'category'
         });
-        const token = signToken(user);
 
-        return  user;
+        user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+
+        return user;
       }
 
       throw AuthenticationError;
@@ -71,10 +69,12 @@ const resolvers = {
           price_data: {
             currency: 'usd',
             product_data: {
-              name: product.model
+              model: product.model,
+              brand: product.brand,
+              image: product.image
             },
             unit_amount: product.price * 100,
-            },
+          },
           quantity: product.purchaseQuantity,
         });
       }
