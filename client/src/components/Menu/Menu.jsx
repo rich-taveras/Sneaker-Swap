@@ -24,6 +24,26 @@ const Menu = ({ open, ...props }) => {
   };
 
   const handleMouseEnter = () => {
+  };
+  const [isLoginFormVisible, setLoginFormVisible] = useState(false);
+  const [isSignupFormVisible, setSignupFormVisible] = useState(false);
+
+  const toggleLoginForm = () => {
+    setLoginFormVisible(!isLoginFormVisible);
+    setSignupFormVisible(false);
+  };
+
+  const toggleSignupForm = () => {
+    setSignupFormVisible(!isSignupFormVisible);
+    setLoginFormVisible(false);
+  };
+
+  const toggleMenu = () => {
+    setLoginFormVisible(false);
+    setSignupFormVisible(false);
+  };
+
+  const handleMouseEnter = () => {
     // Add functionality here if needed
   };
 

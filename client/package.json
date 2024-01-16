@@ -33,6 +33,7 @@
     "vitest": "^0.31.4"
   },
   "devDependencies": {
+>>>>>>> d024d107f2cd385a5d01ef654d03115234b49417
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^4.0.0",
